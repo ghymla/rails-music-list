@@ -1,3 +1,10 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  get '/', to: "years#index"
+  resources :years, only: %i[show] do
+    resources :musics, only: %i[new create]
+  end
+
+  resources :musics, only: %i[show] do
+    resources :categorys, only: %i[show]
+  end
 end

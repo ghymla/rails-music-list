@@ -1,0 +1,9 @@
+<br>
+<br>
+<h1>liste des années</h1>
+<%years = @year.sort_by do |year|  %>
+  <% year.name.to_i%>
+<% end %>
+<% years.each do |year|%>
+  <p> <i><%= link_to "liste des année #{year.name}", year_path(year)%></i></P>
+<%end%>

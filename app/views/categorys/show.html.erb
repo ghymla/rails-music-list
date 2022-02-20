@@ -1,0 +1,8 @@
+<br><br>
+<h1>salut</h1>
+<%  id = @music.year_id%>
+<% @category.musics.each do |music|%>
+  <%if music.year_id == id%>
+    <p><%= music.title%></p>
+  <%end%>
+<%end%>

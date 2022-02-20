@@ -1,0 +1,11 @@
+<br><br>
+
+
+<div class = "flex container">
+  <%= simple_form_for ([ @year, @music ]) do |f| %>
+    <%= f.input :title %>
+    <%= f.input :artist %>
+    <%= f.association :category %>
+    <%= f.submit "Submit review", class: "btn btn-primary" %>
+  <% end %>
+</div>

@@ -1,0 +1,30 @@
+.music_display {
+  width: 30%;
+  border: 1px solid grey;
+  font-weight: bold;
+  padding: 20px;
+  margin: 0 auto;
+  color: chocolate;
+}
+
+i {
+  color: beige;
+  &:hover {
+    color: burlywood;
+  }
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container {
+  margin-left: 10px;
+  text-align: center;
+  width: 50%;
+  input {
+    margin: 10px
+  }
+}
