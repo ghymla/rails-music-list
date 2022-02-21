@@ -2,6 +2,12 @@
 <br>
 <h1> toutes les musiques que j'aiiiiimeuuu !! </h1>
 <% @year.musics.each do |music|%>
-  <p class = "music_display"><%= music.title %>, <%= music.artist%> <i><%= link_to music.category.name, music_category_path(music)%></i></p>
+  <p class = "music_display">
+    <%= music.title %>, <%= music.artist%> <i><%= link_to music.category.name, music_category_path(music)%></i>
+    <br>
+    <span id = "alert">
+      <%= link_to "destroy", music_path(music), method: :delete, data: { confirm: "Are you sure you want to delete this list?" } %>
+    </span>
+  </p>
 <% end %>
 <%= link_to "create a music", new_year_music_path(@year) %>

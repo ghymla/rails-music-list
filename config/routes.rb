@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   resources :musics, only: %i[show] do
     resources :categorys, only: %i[show]
   end
+
+  resources :musics, only: :destroy
 end
